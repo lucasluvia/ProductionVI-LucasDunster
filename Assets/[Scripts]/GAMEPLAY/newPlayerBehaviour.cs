@@ -204,7 +204,7 @@ public class newPlayerBehaviour : MonoBehaviour
         {
             canvas.ShowWinScreen();
         }
-        if(other.CompareTag("Enemy"))
+        if(other.CompareTag("Enemy") || other.CompareTag("DeathPlane"))
         {
             canvas.ShowDeathScreen();
         }
