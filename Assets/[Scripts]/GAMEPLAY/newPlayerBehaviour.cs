@@ -8,6 +8,7 @@ public class newPlayerBehaviour : MonoBehaviour
     [Header("Player Variables")]
     public bool isGrav;
     public bool isRunning;
+    public bool inDetector;
 
     Rigidbody body;
 
@@ -187,9 +188,22 @@ public class newPlayerBehaviour : MonoBehaviour
         float lookParam = Mathf.InverseLerp(40, 340, followTarget.transform.localEulerAngles.x);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Detector"))
+        {
+            inDetector = true;
+            Debug.Log("DETECTOR ENTER");
+        }
+    }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.CompareTag("Detector"))
+        {
+            inDetector = false;
+            Debug.Log("DETECTOR LEAVE");
+        }
     }
 
 

@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Walkable
   - Pingable
+  - Detector
+  - DetectionController
   layers:
   - Default
   - TransparentFX
