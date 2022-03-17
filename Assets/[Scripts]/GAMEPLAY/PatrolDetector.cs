@@ -7,25 +7,35 @@ public class PatrolDetector : MonoBehaviour
 {
     newPlayerBehaviour player;
 
+    public bool pauseDetector;
+
     [SerializeField] Transform patrolPoint1;
     [SerializeField] Transform patrolPoint2;
     [SerializeField] Transform patrolPoint3;
     [SerializeField] Transform patrolPoint4;
     Transform currentDestination;
 
-    int currentDestinationPoint = 1;
+    int currentDestinationPoint = 1; 
+    private Quaternion LookRotation;
+    private Vector3 Direction;
 
     void Start()
     {
         player = GameObject.Find("Player").GetComponent<newPlayerBehaviour>();
         currentDestination = patrolPoint1;
+        pauseDetector = false;
     }
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, currentDestination.position, Time.deltaTime * 2);
+        if (!pauseDetector)
+            transform.position = Vector3.MoveTowards(transform.position, currentDestination.position, Time.deltaTime * 2);
 
-        //Debug.Log(Vector3.Distance(transform.position, currentDestination.position));
+        Direction = (currentDestination.position - transform.position).normalized;
+        LookRotation = Quaternion.LookRotation(Direction);
+        if (!pauseDetector)
+            transform.rotation = Quaternion.Slerp(transform.rotation, LookRotation, Time.deltaTime * 4);
+
 
         if (Vector3.Distance(transform.position, currentDestination.position) < 1.2f)
         {

@@ -195,6 +195,10 @@ public class newPlayerBehaviour : MonoBehaviour
         if(other.CompareTag("Detector"))
         {
             inDetector = true;
+            if(other.transform.parent.GetComponent<PatrolDetector>())
+            {
+                other.transform.parent.GetComponent<PatrolDetector>().pauseDetector = true;
+            }
         }
         if(other.CompareTag("Exit"))
         {
@@ -211,6 +215,10 @@ public class newPlayerBehaviour : MonoBehaviour
         if(other.CompareTag("Detector"))
         {
             inDetector = false;
+            if (other.transform.parent.GetComponent<PatrolDetector>())
+            {
+                other.transform.parent.GetComponent<PatrolDetector>().pauseDetector = false;
+            }
         }
     }
 
