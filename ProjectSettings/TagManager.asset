@@ -8,6 +8,7 @@ TagManager:
   - Pingable
   - Detector
   - DetectionController
+  - Canvas
   layers:
   - Default
   - TransparentFX

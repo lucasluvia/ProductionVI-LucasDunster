@@ -182,10 +182,11 @@ public class newPlayerBehaviour : MonoBehaviour
     
     public void OnMouseLook(InputValue value)
     {
-        lookInput = value.Get<Vector2>();
-        //if aiming, adjust animations for mask to properly animate aim
-        //340,40
-        float lookParam = Mathf.InverseLerp(40, 340, followTarget.transform.localEulerAngles.x);
+        if (Time.timeScale != 0)
+        {
+            lookInput = value.Get<Vector2>();
+            float lookParam = Mathf.InverseLerp(40, 340, followTarget.transform.localEulerAngles.x);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
