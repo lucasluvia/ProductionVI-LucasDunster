@@ -10,6 +10,7 @@ TagManager:
   - DetectionController
   - Canvas
   - Exit
+  - Enemy
   layers:
   - Default
   - TransparentFX

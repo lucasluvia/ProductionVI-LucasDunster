@@ -200,6 +200,10 @@ public class newPlayerBehaviour : MonoBehaviour
         {
             canvas.ShowWinScreen();
         }
+        if(other.CompareTag("Enemy"))
+        {
+            canvas.ShowDeathScreen();
+        }
     }
 
     private void OnTriggerExit(Collider other)
