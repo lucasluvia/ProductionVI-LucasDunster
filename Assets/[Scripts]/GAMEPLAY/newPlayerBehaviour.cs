@@ -11,7 +11,7 @@ public class newPlayerBehaviour : MonoBehaviour
     public bool inDetector;
 
     Rigidbody body;
-
+    CanvasController canvas;
 
     [Header("Movement Properties")]
     [SerializeField] private float walkSpeed = 5.0f;
@@ -43,6 +43,7 @@ public class newPlayerBehaviour : MonoBehaviour
 
     void Start()
     {
+        canvas = GameObject.FindWithTag("Canvas").GetComponent<CanvasController>();
         body = GetComponent<Rigidbody>();
     }
 
@@ -194,7 +195,10 @@ public class newPlayerBehaviour : MonoBehaviour
         if(other.CompareTag("Detector"))
         {
             inDetector = true;
-            Debug.Log("DETECTOR ENTER");
+        }
+        if(other.CompareTag("Exit"))
+        {
+            canvas.ShowWinScreen();
         }
     }
 
@@ -203,7 +207,6 @@ public class newPlayerBehaviour : MonoBehaviour
         if(other.CompareTag("Detector"))
         {
             inDetector = false;
-            Debug.Log("DETECTOR LEAVE");
         }
     }
 

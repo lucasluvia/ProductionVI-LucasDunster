@@ -7,10 +7,18 @@ using UnityEngine.SceneManagement;
 public class CanvasController : MonoBehaviour
 {
     [SerializeField] GameObject gameOverPanel;
+    [SerializeField] GameObject gameWinPanel;
 
     void Start()
     {
         gameOverPanel.SetActive(false);
+        gameWinPanel.SetActive(false);
+    }
+
+    public void ShowWinScreen()
+    {
+        Time.timeScale = 0;
+        gameWinPanel.SetActive(true);
     }
 
     public void ShowDeathScreen()
@@ -21,6 +29,7 @@ public class CanvasController : MonoBehaviour
     
     public void OnReplay_Pressed()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("MovementTest");
     }
 

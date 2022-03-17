@@ -9,6 +9,7 @@ TagManager:
   - Detector
   - DetectionController
   - Canvas
+  - Exit
   layers:
   - Default
   - TransparentFX

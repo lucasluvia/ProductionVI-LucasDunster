@@ -47,7 +47,6 @@ public class DetectionComponent : MonoBehaviour
                     detectionController.DetectionProgression -= DecreaseStrength;
             }
         }
-        
     }
 
 }
