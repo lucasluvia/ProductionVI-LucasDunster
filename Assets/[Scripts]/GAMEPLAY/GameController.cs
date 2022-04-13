@@ -14,6 +14,11 @@ public class GameController : MonoBehaviour
     Vector3 environmentRotation;
     private float rotationUnits;
 
+    void Awake()
+    {
+        Time.timeScale = 1f;
+    }
+
     void Start()
     {
         playerReference = GameObject.Find("Player");

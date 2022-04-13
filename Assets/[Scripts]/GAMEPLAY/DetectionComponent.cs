@@ -6,7 +6,10 @@ public class DetectionComponent : MonoBehaviour
 {
     public DetectionType detectionType;
     public float DetectionStrength;
-    public float DecreaseStrength = 1;
+    public float DecreaseStrength = 5f;
+
+    public bool isPlayerHere;
+
 
     DetectionController detectionController;
     newPlayerBehaviour player;
@@ -16,13 +19,13 @@ public class DetectionComponent : MonoBehaviour
         switch (detectionType)
         {
             case DetectionType.CAMERA_STATIC:
-                DetectionStrength = 5.0f;
+                DetectionStrength = 10f;
                 break;
             case DetectionType.CAMERA_SCANNING:
-                DetectionStrength = 5.0f;
+                DetectionStrength = 10f;
                 break;
             case DetectionType.PATROL:
-                DetectionStrength = 10.0f;
+                DetectionStrength = 20f;
                 break;
         }
         player = GameObject.FindWithTag("Player").GetComponent<newPlayerBehaviour>();
@@ -32,14 +35,17 @@ public class DetectionComponent : MonoBehaviour
     float elapsed = 0f;
     void Update()
     {
-
         elapsed += Time.deltaTime;
-        if(elapsed >= 1f)
+        if (elapsed >= 1f)
         {
             elapsed = elapsed % 1f;
             if (player.inDetector)
             {
-                detectionController.DetectionProgression += DetectionStrength;
+                if (isPlayerHere)
+                {
+                    detectionController.DetectionProgression += DetectionStrength;
+                    Debug.Log("Adding +" + DetectionStrength + " to progression.");
+                }
             }
             else
             {
@@ -48,5 +54,5 @@ public class DetectionComponent : MonoBehaviour
             }
         }
     }
-
 }
+

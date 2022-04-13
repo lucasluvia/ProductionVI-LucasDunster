@@ -194,6 +194,10 @@ public class newPlayerBehaviour : MonoBehaviour
     {
         if(other.CompareTag("Detector"))
         {
+            if (other.GetComponent<DetectionComponent>())
+            {
+                other.GetComponent<DetectionComponent>().isPlayerHere = true;
+            }
             inDetector = true;
             if(other.transform.parent.GetComponent<PatrolDetector>())
             {
@@ -214,6 +218,7 @@ public class newPlayerBehaviour : MonoBehaviour
     {
         if(other.CompareTag("Detector"))
         {
+            other.GetComponent<DetectionComponent>().isPlayerHere = false;
             inDetector = false;
             if (other.transform.parent.GetComponent<PatrolDetector>())
             {
