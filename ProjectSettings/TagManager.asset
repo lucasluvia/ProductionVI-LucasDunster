@@ -12,6 +12,7 @@ TagManager:
   - Exit
   - Enemy
   - DeathPlane
+  - Drone
   layers:
   - Default
   - TransparentFX

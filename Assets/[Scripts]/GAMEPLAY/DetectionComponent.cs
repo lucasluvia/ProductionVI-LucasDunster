@@ -16,6 +16,7 @@ public class DetectionComponent : MonoBehaviour
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player").GetComponent<newPlayerBehaviour>();
         switch (detectionType)
         {
             case DetectionType.CAMERA_STATIC:
@@ -28,7 +29,6 @@ public class DetectionComponent : MonoBehaviour
                 DetectionStrength = 20f;
                 break;
         }
-        player = GameObject.FindWithTag("Player").GetComponent<newPlayerBehaviour>();
         detectionController = GameObject.FindWithTag("DetectionController").GetComponent<DetectionController>();
     }
 
