@@ -59,7 +59,6 @@ public class newPlayerBehaviour : MonoBehaviour
             BufferUpdate();
         }
 
-        
     }
 
 
@@ -81,8 +80,6 @@ public class newPlayerBehaviour : MonoBehaviour
         {
             angles.x = 40;
         }
-
-        //Debug.Log(angles.x);
 
         followTarget.transform.localEulerAngles = angles;
 
@@ -136,7 +133,7 @@ public class newPlayerBehaviour : MonoBehaviour
                     var other = hitData.transform.gameObject.GetComponent<WallController>();
                     if (other != null)
                     {
-                        other.isFlashing = true;
+                        canvas.SetCrosshairState(true);
                         if (isGrav)
                         {
                             GameObject.Find("GameController").GetComponent<GameController>().Rotate(other.direction);
@@ -145,9 +142,17 @@ public class newPlayerBehaviour : MonoBehaviour
                             isGrav = false;
                         }
                     }
+                    else
+                        canvas.SetCrosshairState(false);
                 }
+                else
+                    canvas.SetCrosshairState(false);
             }
+            else
+                canvas.SetCrosshairState(false);
         }
+        else
+            canvas.SetCrosshairState(false);
     }
 
     private void BufferUpdate()
@@ -170,7 +175,6 @@ public class newPlayerBehaviour : MonoBehaviour
         inputVector = value.Get<Vector2>();
     }
     
-
     public void OnGrav(InputValue value)
     {
         isGrav = value.isPressed;

@@ -19,7 +19,6 @@ public class DetectionController : MonoBehaviour
 
     void Update()
     {
-        //detectionSlider.value = DetectionProgression / 100;
         detectionSlider.value = Mathf.Lerp(detectionSlider.value, DetectionProgression / 100, Time.deltaTime);
         if(detectionSlider.value >= 1)
         {
