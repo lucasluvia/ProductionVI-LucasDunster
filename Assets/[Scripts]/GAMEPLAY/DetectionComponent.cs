@@ -23,10 +23,10 @@ public class DetectionComponent : MonoBehaviour
                 DetectionStrength = 10f;
                 break;
             case DetectionType.CAMERA_SCANNING:
-                DetectionStrength = 10f;
+                DetectionStrength = 20f;
                 break;
             case DetectionType.PATROL:
-                DetectionStrength = 20f;
+                DetectionStrength = 35f;
                 break;
         }
         detectionController = GameObject.FindWithTag("DetectionController").GetComponent<DetectionController>();
@@ -36,9 +36,9 @@ public class DetectionComponent : MonoBehaviour
     void Update()
     {
         elapsed += Time.deltaTime;
-        if (elapsed >= 1f)
+        if (elapsed >= 0.5f)
         {
-            elapsed = elapsed % 1f;
+            elapsed = elapsed % 0.5f;
             if (player.inDetector)
             {
                 if (isPlayerHere)
