@@ -39,6 +39,11 @@ public class newPlayerBehaviour : MonoBehaviour
     public LayerMask groundMask;
     public bool isGrounded;
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioSource SwapFX;
+    [SerializeField] private AudioSource DetectFX;
+
+
     private int bufferCounter = 0;
 
     void Start()
@@ -136,6 +141,7 @@ public class newPlayerBehaviour : MonoBehaviour
                         canvas.SetCrosshairState(true);
                         if (isGrav)
                         {
+                            SwapFX.Play();
                             GameObject.Find("GameController").GetComponent<GameController>().Rotate(other.direction);
                             inBufferUpdate = true;
                             isGrav = false;
@@ -197,6 +203,7 @@ public class newPlayerBehaviour : MonoBehaviour
     {
         if(other.CompareTag("Detector"))
         {
+            DetectFX.Play();
             if (other.GetComponent<DetectionComponent>())
             {
                 other.GetComponent<DetectionComponent>().isPlayerHere = true;

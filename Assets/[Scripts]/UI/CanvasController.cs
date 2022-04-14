@@ -18,6 +18,10 @@ public class CanvasController : MonoBehaviour
     [SerializeField] string nextLevel = "MovementTest";
     [SerializeField] string thisLevel = "MovementTest";
 
+    [Header("Sound Effects")]
+    [SerializeField] private AudioSource WinFX;
+    [SerializeField] private AudioSource LoseFX;
+
     void Start()
     {
         unfocussedCrosshair.SetActive(true);
@@ -29,6 +33,7 @@ public class CanvasController : MonoBehaviour
 
     public void ShowWinScreen()
     {
+        WinFX.Play();
         HideCrosshair();
         Time.timeScale = 0;
         gameWinPanel.SetActive(true);
@@ -36,6 +41,7 @@ public class CanvasController : MonoBehaviour
 
     public void ShowDeathScreen()
     {
+        LoseFX.Play();
         HideCrosshair();
         Time.timeScale = 0;
         gameOverPanel.SetActive(true);

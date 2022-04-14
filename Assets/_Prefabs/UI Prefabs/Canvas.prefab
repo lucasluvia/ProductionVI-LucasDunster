@@ -634,8 +634,10 @@ MonoBehaviour:
   gameWinPanel: {fileID: 1961693567785350237}
   unfocussedCrosshair: {fileID: 1961693567981156466}
   focussedCrosshair: {fileID: 1961693568438073292}
-  nextLevel: Level1
-  thisLevel: Level3
+  nextLevel: Level3
+  thisLevel: Level2
+  WinFX: {fileID: 0}
+  LoseFX: {fileID: 0}
 --- !u!1 &1961693568419743162
 GameObject:
   m_ObjectHideFlags: 0

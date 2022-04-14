@@ -145,6 +145,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   isGrounded: 0
+  SwapFX: {fileID: 0}
+  DetectFX: {fileID: 0}
 --- !u!33 &7501631549379781178
 MeshFilter:
   m_ObjectHideFlags: 0

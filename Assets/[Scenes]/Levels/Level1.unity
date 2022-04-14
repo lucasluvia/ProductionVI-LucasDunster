@@ -20089,6 +20089,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1961693568386691457, guid: d99b75efa290b364fac37b307392fdf9, type: 3}
+      propertyPath: WinFX
+      value: 
+      objectReference: {fileID: 1584450339}
+    - target: {fileID: 1961693568386691457, guid: d99b75efa290b364fac37b307392fdf9, type: 3}
+      propertyPath: LoseFX
+      value: 
+      objectReference: {fileID: 1584450338}
+    - target: {fileID: 1961693568386691457, guid: d99b75efa290b364fac37b307392fdf9, type: 3}
       propertyPath: nextLevel
       value: Level2
       objectReference: {fileID: 0}
@@ -21329,6 +21337,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6532911809818077334, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532911809818077334, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7.76
       objectReference: {fileID: 0}
@@ -21346,7 +21358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6532911809818077334, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.023782592
+      value: 0.02378259
       objectReference: {fileID: 0}
     - target: {fileID: 6532911809818077334, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -21449,6 +21461,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 634802281}
     - target: {fileID: 6532911811168614209, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6532911811168614209, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
       propertyPath: m_LocalPosition.y
       value: -7.76
       objectReference: {fileID: 0}
@@ -21466,7 +21482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6532911811168614209, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.023782592
+      value: 0.02378259
       objectReference: {fileID: 0}
     - target: {fileID: 6532911811168614209, guid: 7d97d2de352874a4f8c1eaebf3b8898d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -22519,6 +22535,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 669f2ac849955624282ff45345070253, type: 3}
+--- !u!82 &1584450338 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1774983398334410097, guid: 669f2ac849955624282ff45345070253, type: 3}
+  m_PrefabInstance: {fileID: 1584450337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1584450339 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6217056569496872353, guid: 669f2ac849955624282ff45345070253, type: 3}
+  m_PrefabInstance: {fileID: 1584450337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1584450340 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4819279700988004266, guid: 669f2ac849955624282ff45345070253, type: 3}
+  m_PrefabInstance: {fileID: 1584450337}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1584450341 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 362936114811621903, guid: 669f2ac849955624282ff45345070253, type: 3}
+  m_PrefabInstance: {fileID: 1584450337}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &1587058261
 Mesh:
   m_ObjectHideFlags: 0
@@ -25335,6 +25371,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5992872576690719362}
     m_Modifications:
+    - target: {fileID: 7501631549379781156, guid: a0d5f7a645b2217419efbf669464dbde, type: 3}
+      propertyPath: SwapFX
+      value: 
+      objectReference: {fileID: 1584450341}
+    - target: {fileID: 7501631549379781156, guid: a0d5f7a645b2217419efbf669464dbde, type: 3}
+      propertyPath: DetectFX
+      value: 
+      objectReference: {fileID: 1584450340}
     - target: {fileID: 7501631549379781156, guid: a0d5f7a645b2217419efbf669464dbde, type: 3}
       propertyPath: inBufferUpdate
       value: 1
