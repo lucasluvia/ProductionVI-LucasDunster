@@ -40,7 +40,6 @@ public class PatrolDetector : MonoBehaviour
         if (Vector3.Distance(transform.position, currentDestination.position) < 1.2f)
         {
             if (currentDestinationPoint > 4) currentDestinationPoint = 1;
-            Debug.Log("Currently Patrolling to Point " + currentDestinationPoint);
 
             if (currentDestinationPoint == 1)
                 currentDestination = patrolPoint1;

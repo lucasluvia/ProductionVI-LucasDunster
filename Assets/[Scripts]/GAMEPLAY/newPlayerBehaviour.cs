@@ -137,7 +137,6 @@ public class newPlayerBehaviour : MonoBehaviour
                         if (isGrav)
                         {
                             GameObject.Find("GameController").GetComponent<GameController>().Rotate(other.direction);
-                            Debug.Log("Fired and hit a wall");
                             inBufferUpdate = true;
                             isGrav = false;
                         }

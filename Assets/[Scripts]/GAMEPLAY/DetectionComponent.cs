@@ -44,7 +44,6 @@ public class DetectionComponent : MonoBehaviour
                 if (isPlayerHere)
                 {
                     detectionController.DetectionProgression += DetectionStrength;
-                    Debug.Log("Adding +" + DetectionStrength + " to progression.");
                 }
             }
             else
