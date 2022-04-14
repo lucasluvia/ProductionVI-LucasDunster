@@ -31,8 +31,8 @@ public class GameController : MonoBehaviour
         if(isRotating)
         {
             environmentReference.transform.localRotation = Quaternion.Euler(newRotationDestination);
-            playerReference.transform.localRotation = Quaternion.Euler(-newRotationDestination);
-            playerReference.transform.localRotation = Quaternion.Euler(-newRotationDestination);
+            //playerReference.transform.localRotation = Quaternion.Euler(-newRotationDestination);
+            //playerReference.transform.localRotation = Quaternion.Euler(-newRotationDestination);
             isRotating = false;
             
         }

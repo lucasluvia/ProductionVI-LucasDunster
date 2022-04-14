@@ -81,7 +81,7 @@ public class newPlayerBehaviour : MonoBehaviour
             angles.x = 40;
         }
 
-        followTarget.transform.localEulerAngles = angles;
+        //followTarget.transform.localEulerAngles = angles;
 
         transform.rotation = Quaternion.Euler(0, followTarget.transform.rotation.eulerAngles.y, 0);
         followTarget.transform.localEulerAngles = new Vector3(angles.x, 0, 0);
@@ -108,14 +108,14 @@ public class newPlayerBehaviour : MonoBehaviour
 
         transform.position += movementDirection;
 
-        if (transform.rotation.x > 0.6)
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(70.0f, 0, 0));
-        }
-        if (transform.rotation.x < -0.6)
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(-70.0f, 0, 0));
-        }
+        //if (transform.rotation.x > 0.6)
+        //{
+        //    transform.rotation = Quaternion.Euler(new Vector3(70.0f, 0, 0));
+        //}
+        //if (transform.rotation.x < -0.6)
+        //{
+        //    transform.rotation = Quaternion.Euler(new Vector3(-70.0f, 0, 0));
+        //}
     }
 
     private void doGravityUpdate()
