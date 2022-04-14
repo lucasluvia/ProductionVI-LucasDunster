@@ -20092,6 +20092,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: Level2
       objectReference: {fileID: 0}
+    - target: {fileID: 1961693568386691457, guid: d99b75efa290b364fac37b307392fdf9, type: 3}
+      propertyPath: thisLevel
+      value: Level1
+      objectReference: {fileID: 0}
     - target: {fileID: 1961693568386691578, guid: d99b75efa290b364fac37b307392fdf9, type: 3}
       propertyPath: m_Name
       value: Canvas

@@ -634,7 +634,8 @@ MonoBehaviour:
   gameWinPanel: {fileID: 1961693567785350237}
   unfocussedCrosshair: {fileID: 1961693567981156466}
   focussedCrosshair: {fileID: 1961693568438073292}
-  nextLevel: MovementTest
+  nextLevel: Level1
+  thisLevel: Level3
 --- !u!1 &1961693568419743162
 GameObject:
   m_ObjectHideFlags: 0
@@ -1696,7 +1697,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1961693568386691457}
         m_TargetAssemblyTypeName: CanvasController, Assembly-CSharp
-        m_MethodName: OnReplay_Pressed
+        m_MethodName: OnNext_Pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

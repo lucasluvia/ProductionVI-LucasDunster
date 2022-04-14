@@ -14,8 +14,9 @@ public class CanvasController : MonoBehaviour
     [SerializeField] GameObject unfocussedCrosshair;
     [SerializeField] GameObject focussedCrosshair;
 
-    [Header("Next Level Name")]
+    [Header("Level Names")]
     [SerializeField] string nextLevel = "MovementTest";
+    [SerializeField] string thisLevel = "MovementTest";
 
     void Start()
     {
@@ -40,10 +41,16 @@ public class CanvasController : MonoBehaviour
         gameOverPanel.SetActive(true);
     }
     
-    public void OnReplay_Pressed()
+    public void OnNext_Pressed()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(nextLevel);
+    }
+    
+    public void OnReplay_Pressed()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(thisLevel);
     }
 
     public void SetCrosshairState(bool isFocussed)
